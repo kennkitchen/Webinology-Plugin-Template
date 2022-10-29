@@ -25,6 +25,8 @@ declare(strict_types=1);
  * Domain Path:       /languages
  */
 
+require_once 'vendor/autoload.php';
+
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
 	die;

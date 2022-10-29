@@ -52,6 +52,8 @@ class Webinology_Plugin_Template_Public {
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 
+        $example = new Webinology_Plugin_Template_Example();
+
 	}
 
 	/**
