@@ -50,15 +50,27 @@ This plugin uses Composer to install some dependencies that we frequently use. T
   * [PHPStan](https://phpstan.org/)
 
 Be sure and remove any of these that you're not actually planning to use.
+#### PHP dotenv
+The main plugin file in the root directory (`webinology-plugin-template.php`) has a use statement for the PHP dotenv
+library along with an example of usage (`echo $_ENV['TEST'];`). To use environment variables, copy the file `env.example` to `.env` (also in the plugin's
+root directory) and add the variables you need.
+
+NOTE: the `.env` file is already in the `.gitignore` that comes with this repo.
 
 Composer is also used to bring in all classes that are present in the custom `classes` subdirectory. There's an example 
 class file in there already.
+#### Monolog
+(pending)
+
+#### Twig
+(pending)
 
 ### General WordPress Plugin Boilerplate info
 For general information about using the WordPress Plugin Boilerplate, see
 See [WordPress Plugin Boilerplate Part One](https://kenn.kitchen/wordpress-plugin-boilerplate-part-one/) and [WordPress Plugin Boilerplate Part Two](https://kenn.kitchen/wordpress-plugin-boilerplate-part-two/) at Kenn Kitchen's blog.
 
 ## TODO
-It's probably a good idea to switch to namespaces at some point, but WPPB doesn't by default; it loads its classes
+* Eventually, the Example class will contain examples of using the extra libraries we import.
+* It's probably a good idea to switch to namespaces at some point, but WPPB doesn't by default; it loads its classes
 manually. To use a different method of loading might mean refactoring a lot of their original code, which would then 
 make it more work for us to update our base code (in the event that they update theirs). 

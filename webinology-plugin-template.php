@@ -32,6 +32,17 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+// TODO If you don't plan to use .evn, this can be removed
+use Dotenv\Dotenv;
+
+/**
+ * Load the .env file
+ */
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+echo $_ENV['TEST'];
+// TODO section end
+
 /**
  * Currently plugin version.
  * Start at version 1.0.0 and use SemVer - https://semver.org

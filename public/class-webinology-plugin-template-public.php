@@ -52,6 +52,7 @@ class Webinology_Plugin_Template_Public {
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 
+        // TODO this is just here to verify that the custom example class is being loaded
         $example = new Webinology_Plugin_Template_Example();
 
 	}
