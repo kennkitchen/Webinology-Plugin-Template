@@ -1,5 +1,5 @@
 # Webinology Plugin Template
-This is a copy of the WordPress Plugin Boilerplate which has been modified to use some of the things we rely on at 
+This is a copy of the WordPress Plugin Boilerplate (WPPB) which has been modified to use some of the things we rely on at 
 Webinology when developing plugins.
 
 ## Installation Instructions
@@ -20,27 +20,36 @@ Widgetizer".
 #### Help for renaming files
 On Linux, the easiest way to do the renames is with the `rename` command. On Ubuntu, this can be installed with 
 `sudo apt install rename`.
-
 Using our example, the command would look like this:
 ```shell
 shopt -s globstar
 rename 's/webinology-plugin-template/super-awesome-widgetizer/g' **/*.php -v
 ```
-
 #### Help for global replacements
 ```shell
 find . -type f -name "*.php" -exec sed -i 's/Webinology_Plugin_Template/Super_Awesome_Widgetizer/g' {} +
 ```
-
 ```shell
 find . -type f -name "*.php" -exec sed -i 's/webinology-plugin-template/super-awesome-widgetizer/g' {} +
 ```
-
 ```shell
 find . -type f -name "*.php" -exec sed -i 's/WEBINOLOGY_PLUGIN_TEMPLATE/SUPER_AWESOME_WIDGETIZER/g' {} +
 ```
+## Composer
+After all of the renaming is done, run `composer install` from the root directory of your plugin.
 
 ## Usage
-See https://kenn.kitchen/wordpress-plugin-boilerplate-part-one/ and https://kenn.kitchen/wordpress-plugin-boilerplate-part-two/
+### Custom Features
+This plugin uses Composer to install some dependencies that we frequently use. (More on that later.)
 
-## Additional Details
+Composer is also used to bring in all classes that are present in the custom `classes` subdirectory. There's an example 
+class file in there already.
+
+### General WordPress Plugin Boilerplate info
+For general information about using the WordPress Plugin Boilerplace, see
+See [WordPress Plugin Boilerplate Part One](https://kenn.kitchen/wordpress-plugin-boilerplate-part-one/) and [WordPress Plugin Boilerplate Part Two](https://kenn.kitchen/wordpress-plugin-boilerplate-part-two/) at Kenn Kitchen's blog.
+
+## TODO
+It's probably a good idea to switch to namespaces at some point, but WPPB doesn't by default; it loads its classes
+manually. To use a different method of loading might mean refactoring a lot of their original code, which would then 
+make it more work for us to update our base code (in the event that they update theirs). 
