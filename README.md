@@ -49,11 +49,13 @@ This plugin uses Composer to install some dependencies that we frequently use. T
   * [PHPUnit](https://phpunit.de/)
   * [PHPStan](https://phpstan.org/)
 
+Be sure and remove any of these that you're not actually planning to use.
+
 Composer is also used to bring in all classes that are present in the custom `classes` subdirectory. There's an example 
 class file in there already.
 
 ### General WordPress Plugin Boilerplate info
-For general information about using the WordPress Plugin Boilerplace, see
+For general information about using the WordPress Plugin Boilerplate, see
 See [WordPress Plugin Boilerplate Part One](https://kenn.kitchen/wordpress-plugin-boilerplate-part-one/) and [WordPress Plugin Boilerplate Part Two](https://kenn.kitchen/wordpress-plugin-boilerplate-part-two/) at Kenn Kitchen's blog.
 
 ## TODO
