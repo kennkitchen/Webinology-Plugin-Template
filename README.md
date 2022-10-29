@@ -40,7 +40,14 @@ After all of the renaming is done, run `composer install` from the root director
 
 ## Usage
 ### Custom Features
-This plugin uses Composer to install some dependencies that we frequently use. (More on that later.)
+This plugin uses Composer to install some dependencies that we frequently use. These are:
+* Prod
+  * [Twig](https://twig.symfony.com/)
+  * [Monolog](https://github.com/Seldaek/monolog)
+  * [PHP dotenv](https://github.com/vlucas/phpdotenv)
+* Dev
+  * [PHPUnit](https://phpunit.de/)
+  * [PHPStan](https://phpstan.org/)
 
 Composer is also used to bring in all classes that are present in the custom `classes` subdirectory. There's an example 
 class file in there already.
